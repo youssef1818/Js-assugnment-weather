@@ -82,7 +82,7 @@ function display(data){
         //First day:
         
         firstDay.city.innerHTML=data[0].location;
-        firstDay.degree.innerHTML=data[0].current.temp_c  ;    
+        firstDay.degree.innerHTML=round(data[0].current.temp_c,1)  ;    
     firstDay.state.innerHTML=data[0].day.condition.text;
     firstDay.humidity.innerHTML=data[0].current.humidity;
     firstDay.windSpeed.innerHTML=data[0].current.wind_kph;
@@ -129,7 +129,7 @@ searchInput.addEventListener("keyup",function(){
 
 
 
-// function round(value, precision) {
-//     var multiplier = Math.pow(10, precision || 0);
-//     return Math.round(value * multiplier) / multiplier;
-// }
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
