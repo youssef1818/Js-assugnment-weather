@@ -36,10 +36,10 @@ var findBtn=document.getElementById("findBtn");
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 /*-----------Functions----------- */
-
+getLocation();
 //d8d6a3bbda5f4acf8a0180957241312 
 async function getCity(city) {
-    var response= await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d8d6a3bbda5f4acf8a0180957241312 &q=${city}&days=3`);
+    var response= await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d8d6a3bbda5f4acf8a0180957241312 &q=${city}&days=3`);
     var finalForecast=await response.json();
    
     // console.log(finalForecast)
@@ -80,9 +80,8 @@ function display(data){
         // console.log(dayName3);
         // console.log(firstTemp)
         //First day:
-        
-        firstDay.city.innerHTML=data[0].location;
-        firstDay.degree.innerHTML=round(data[0].current.temp_c,1)  ;    
+    firstDay.city.innerHTML=data[0].location;
+    firstDay.degree.innerHTML=data[0].current.temp_c,1;    
     firstDay.state.innerHTML=data[0].day.condition.text;
     firstDay.humidity.innerHTML=data[0].current.humidity;
     firstDay.windSpeed.innerHTML=data[0].current.wind_kph;
@@ -113,7 +112,20 @@ function display(data){
 
 
 
-getCity("cairo")
+
+
+
+
+// 80a138e2d86120e05245d45830001b0f---->Api key location
+async function getLocation(){
+    var loc= await fetch("https://api.ipapi.com/api/check?access_key=80a138e2d86120e05245d45830001b0f");
+    var response=await loc.json();
+    getCity(response.city);
+    
+}
+
+
+
 /*-----------Search----------- */
 searchInput.addEventListener("keyup",function(){
     city=searchInput.value;
@@ -123,13 +135,3 @@ searchInput.addEventListener("keyup",function(){
 
 
 
-
-
-
-
-
-
-function round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
-}
