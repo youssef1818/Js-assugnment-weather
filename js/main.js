@@ -96,7 +96,7 @@ function display(data){
     secondDay.maxDeg.innerHTML=data[1].day.maxtemp_c;
     secondDay.minDeg.innerHTML=data[1].day.mintemp_c;
     secondDay.state.innerHTML=data[1].day.condition.text;
-    // secondDay.img.src=data[1].day.condition.icon;
+    secondDay.img.src=data[1].day.condition.icon;
     secondDay.dayDate.innerHTML=dayName2;
 
 
@@ -105,7 +105,7 @@ function display(data){
     thirdDay.maxDeg.innerHTML=data[2].day.maxtemp_c;
     thirdDay.minDeg.innerHTML=data[2].day.mintemp_c;
     thirdDay.state.innerHTML=data[2].day.condition.text;
-    // document.querySelector(".third img").src=data[2].day.condition.icon;
+    document.querySelector(".third img").src=data[2].day.condition.icon;
     thirdDay.dayDate.innerHTML=dayName3;
 
 
