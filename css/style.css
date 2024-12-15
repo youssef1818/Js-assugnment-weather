@@ -1,0 +1,159 @@
+/* -----------------------Main-------------------- */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.bg-main{
+    background-color: #1E202B;
+
+}
+h1,h2,h3,h4,h5,p,span{
+    font-family: "Roboto", sans-serif;
+}
+input{
+    color: white;
+}
+/* -----------------------Nav-------------------- */
+nav{
+    background-color: #1E202B;
+}
+#weather{
+    font-size: 16px;
+}
+.small-text{
+    font-size: 10px;
+}
+nav img{
+    width: 64px;
+    height: 38px;
+}
+.nav-link{
+    font-size: 14px;
+    padding: 2px;
+    color: white;
+    border-radius: var(--bs-border-radius-pill);
+    border-width: 2px ;
+    border:  var(--bs-border-style) transparent ;
+    transition: 0.5s;
+}
+
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #009AD8!important;
+
+    border-radius: var(--bs-border-radius-pill);
+    border-width: 2px !important;
+    border:  var(--bs-border-style) #009AD8 ;
+    transition: 0.5s;
+    
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: transparent;
+}
+.nav-link:hover{
+    border-radius: var(--bs-border-radius-pill);
+
+    border:  var(--bs-border-style) #009AD8 ;
+    color: #009AD8;
+}
+/* -----------------------Search-------------------- */
+.search{
+        background-image: url(../imgs/banner.png);
+        background-color: #1E202B;
+        background-size:auto;
+        background-repeat:no-repeat;
+       
+}
+#location{
+    border: none;
+    background-color: #1E202B;
+}
+#location:focus{
+    border: none;
+    outline: none;
+}
+#findBtn{
+    background-color: #009AD8;
+}
+/* -----------------------Weather Table-------------------- */
+#city{
+    font-size: 18px;
+    color:rgb(191, 193, 200);
+}
+.state,#state{
+    font-size: 14px;
+    color:  rgb(0, 154, 216);
+}
+#degree{
+    font-size: 90px;
+}
+.icon-text{
+    font-size: 14px;
+    color: rgb(191, 193, 200);
+}
+.date{
+    height: 40px;
+    background-color: #2D303D;
+}
+.weather{
+    background-color: #323544;
+}
+.dates{
+    font-size: 14px;
+}
+.weather2{
+    background-color: #262936;
+}
+.date2{
+    background-color: #222530;
+}
+#degree2{
+    font-size: 24px;
+}
+#minDegree{
+    font-size: 16px;
+}
+.sun{
+    width: 15%;
+}
+.rounded-top-left {
+    border-top-left-radius: var(--bs-border-radius) !important;
+    
+}
+.rounded-bottom-left {
+    border-bottom-left-radius: var(--bs-border-radius) !important;
+    
+}
+.rounded-bottom-right {
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+    
+}
+.rounded-top-right {
+    border-top-right-radius: var(--bs-border-radius) !important;
+    
+}
+/* -----------------------Footer-------------------- */
+footer{
+    background-color:#262936 ;
+}
+#facebook{
+    padding: 9px 13px;
+}
+.icon-brands{
+    background-color: #1E202B;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.icon-brands:hover{
+    background-color: #009AD8;
+    color: white;
+}
+.footer-text{
+    font-size: 14px;
+    position: relative;
+    top: -20px;
+}
