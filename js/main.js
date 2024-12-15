@@ -67,9 +67,7 @@ async function getCity(city) {
 
 function display(data){
     /*-----------getMonth----------- */
-    
     var d = new Date(data[0].date);
-  monthDate.innerHTML = `${d.getDate()} - ${months[d.getMonth()]}`;
     /*-----------getDays----------- */
     var d1 = new Date(data[0].date);
     var dayName1 = days[d1.getDay()];
@@ -77,20 +75,21 @@ function display(data){
     var dayName2 = days[d2.getDay()];
     var d3 = new Date(data[2].date);
     var dayName3 = days[d3.getDay()];
-        console.log(dayName1);
+    console.log(dayName1);
         // console.log(dayName2);
         // console.log(dayName3);
-    // console.log(firstTemp)
-   //First day:
-   
-    firstDay.city.innerHTML=data[0].location;
-    firstDay.degree.innerHTML=data[0].current.temp_c  ;    
+        // console.log(firstTemp)
+        //First day:
+        
+        firstDay.city.innerHTML=data[0].location;
+        firstDay.degree.innerHTML=data[0].current.temp_c  ;    
     firstDay.state.innerHTML=data[0].day.condition.text;
     firstDay.humidity.innerHTML=data[0].current.humidity;
     firstDay.windSpeed.innerHTML=data[0].current.wind_kph;
     firstDay.windDirectipn.innerHTML=data[0].current.wind_dir;
     firstDay.img.src=data[0].current.condition.icon;
     firstDay.dayDate.innerHTML=dayName1;
+    firstDay.monthDate.innerHTML = `${d.getDate()} ${months[d.getMonth()]}`;
 
 
     // Second day:
