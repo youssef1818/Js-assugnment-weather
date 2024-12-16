@@ -10,6 +10,9 @@ body{
     background-color: #1E202B;
 
 }
+.bg-second{
+    background-color: #222530;
+}
 h1,h2,h3,h4,h5,p,span{
     font-family: "Roboto", sans-serif;
 }
@@ -39,9 +42,11 @@ nav img{
     border:  var(--bs-border-style) transparent ;
     transition: 0.5s;
 }
+.nav-link:focus{
+    color: white;
+}
 
-
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+.navbar-nav .nav-link.active {
     color: #009AD8!important;
 
     border-radius: var(--bs-border-radius-pill);
@@ -156,4 +161,78 @@ footer{
     font-size: 14px;
     position: relative;
     top: -20px;
+}
+/* -----------------------Contact-------------------- */
+#contactBody{
+    background-color: #1E202B;
+}
+#locationHolder{
+    background-color: #222530;
+}
+#contact #contactBody #locationHolder .path {
+    
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    color: rgb(191, 193, 200);
+  }
+  #contact #contactBody #locationHolder .path > span {
+    color: white;
+  }
+  #contact #contactBody #locationHolder .path > a {
+    text-decoration: none;
+    color:rgb(191, 193, 200) ;
+  }
+  #contact #contactBody #locationHolder .path > a:hover {
+    text-decoration: underline;
+  }
+  #contact #contactBody .input-fields .form-control::placeholder {
+    color: rgb(97, 104, 110);
+  }
+  #contact #contactBody .input-fields .form-control:focus {
+    border-color:#009AD8;
+    box-shadow: none;
+  }
+  #contact #contactBody .input-fields .form-control:hover {
+    border-color:#009AD8;
+    
+  }
+  
+  #contact #contactBody .input-fields textarea.form-control {
+    border-radius: 25px;
+    height: 150px;
+  }
+  
+  #contact #contactBody .input-fields button {
+    width: 80px;
+    margin-left: auto;
+    margin-right: 12px;
+  }
+  #contact #contactBody .input-fields .form-control {
+    background-color: transparent;
+    color: white;
+    border-radius: 50rem;
+    border: 2px solid rgb(60, 64, 68);
+    padding: 13px;
+  
+    font-size: 14px;
+    font-weight: 400;
+    
+  }
+.image-text i{
+    color: #009AD8;
+}
+.image-text p{
+    color: rgb(191, 193, 200);
+    font-size: 14px;
+}
+.contact-text {
+    color: rgb(191, 193, 200);
+    font-size: 14px;
+}
+.details > h4{
+    font-size: 34px;
+}
+.space{
+    height: 250px;
 }
